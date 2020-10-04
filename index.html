@@ -1,0 +1,8 @@
+<p>If your PHP app supports clean URLs, you can tell the webserver to send
+    these requests to your PHP scripts by adding the following lines to your
+    app's <tt>.htaccess</tt> file:</p>
+
+<pre>RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]</pre>
